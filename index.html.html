@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Dice challenge</title>
+        
+        <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster" rel="stylesheet">
+        <link rel="stylesheet" href="https://www.1001fonts.com/anydore-font.html">
+<style>
+    html{
+    background-color:cadetblue;
+}
+h2{
+    font-family:cursive;
+}
+h1{
+   margin: 30px;
+  font-family: 'Lobster', cursive;
+  text-shadow: 5px 0 #232931;
+  font-size: 8rem;
+  color:aqua;
+}
+.container{
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    display: block;
+}
+footer {
+    margin-top: 5%;
+    color:aqua;
+    text-align: center;
+    font-family: 'Indie Flower', cursive;
+  
+  }
+  .player1 {
+    text-align: center;
+    display: inline-block;
+  
+  }
+  
+img {
+    width:200px;
+  }
+</style>
+    </head>
+    <body>
+        <div class="container">
+
+            <h1 class="refresh">Refresh Me</h1>
+         <div class="player">
+             <h2 >Player 1</h2>
+             <img class="img1" src="./dice6.png">
+         </div>
+          <div class="player">
+            <h2 >Player 2</h2>
+            <img class="img2" src="./dice6.png">
+          </div>
+         </div>
+         <script>
+            alert("Start again?");
+var randomNumber= Math.floor(Math.random()*6)+1;
+var imageSource="./dice"+randomNumber +".png";
+var image1 = document.querySelectorAll("img")[0];
+image1.setAttribute("src",imageSource);
+
+var randomNumber2= Math.floor(Math.random()*7)+1;
+var imageSource2="./dice"+randomNumber2 +".png";
+var image2= document.querySelectorAll("img")[1];
+image2.setAttribute("src",imageSource2);
+if(randomNumber===randomNumber2){
+    document.querySelector("h1").innerHTML="It's a tie!";
+}
+
+if(randomNumber>randomNumber2){
+    document.querySelector("h1").innerHTML="Player 1 wins!";
+    
+}
+else{
+    document.querySelector("h1").innerHTML="Player 2 wins!";
+   
+}
+         </script>
+    </body>
+    <footer>
+        www.Sirisha-dice.com
+    </footer>
+    
+    
+</html>
